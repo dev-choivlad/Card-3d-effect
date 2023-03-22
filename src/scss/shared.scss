@@ -3,22 +3,10 @@ html	{
 }
 
 .main-content {
-	max-width: $max-width;
-	width: 100%;
-	margin: 0 auto;
-	padding: 2rem;
-}
-
-section {
-	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
 	height: 100vh;
-}
-.green {
-	background-color: green;
-}
-
-@media screen and (max-width: 768px) {
-	body.lock {
-		overflow: hidden;
-	}
+	padding: 1rem;
 }

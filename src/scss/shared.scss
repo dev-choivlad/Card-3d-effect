@@ -9,4 +9,43 @@ html	{
 	width: 100vw;
 	height: 100vh;
 	padding: 1rem;
+	margin: auto;
+	font-family: VT323, sans-serif;
+
+	//background: rgb(112,36,232);
+	//background: linear-gradient(90deg, rgba(112,36,232,1) 21%, rgba(0,212,255,1) 100%);
+	background: rgb(83,28,171);
+	background: linear-gradient(90deg, rgba(83,28,171,1) 21%, rgba(125,140,247,1) 68%);
+}
+
+.perspective {
+	width: 100%;
+	perspective: 800px;
+}
+
+.card {
+	position: relative;
+	max-width: 18rem;
+	width: 100%;
+	height: 25.813rem;
+	margin: auto;
+	border-radius: 16px;
+	overflow: hidden;
+	background: hotpink;
+	box-shadow:  15px 15px 70px #2a09a6,
+							 -15px -15px 70px #aba7f1;
+
+	transform-style: preserve-3d;
+	transition: transform .05s linear;
+}
+
+.card__img {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-image: url("../img/vr.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 38% 50%;
+	mix-blend-mode: multiply;
 }

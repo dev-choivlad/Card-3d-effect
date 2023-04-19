@@ -31,6 +31,8 @@ html	{
 							 -15px -15px 70px #aba7f1;
 
 	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-mos-transform-style: preserve-3d;
 	transition: transform .05s linear;
 
 	h1, span {
@@ -43,6 +45,8 @@ html	{
 		top: 2%;
 		left: -15%;
 		transform: translateZ(80px);
+		-webkit-transform: translateZ(80px);
+		-mos-tranform: translateZ(80px);
 	}
 
 	span {
@@ -51,7 +55,7 @@ html	{
 		margin-left: 20%;
 		bottom: 2%;
 		@include adaptive-font(32, 22);
-		transform: translateZ(35px);
+		transform: translateZ(50px);
 	}
 }
 
@@ -61,7 +65,7 @@ html	{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 38% 50%;
-	mix-blend-mode: multiply;
+	//mix-blend-mode: multiply;
 	border-radius: 16px;
 
 	z-index: -1;

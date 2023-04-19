@@ -1,4 +1,3 @@
-import * as flsFunctions from "./modules/check-webp.js";
+import { generate3D } from "./modules/helpers.js";
 
-
-flsFunctions.isWebp();
+generate3D();

@@ -2,11 +2,10 @@ html	{
 	font-family: OpenSans, sans-serif;
 }
 
-.main-content {
+.main-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100vw;
 	height: 100vh;
 	padding: 1rem;
 	margin: auto;
@@ -30,17 +29,36 @@ html	{
 	height: 25.813rem;
 	margin: auto;
 	border-radius: 16px;
-	overflow: hidden;
 	background: hotpink;
 	box-shadow:  15px 15px 70px #2a09a6,
 							 -15px -15px 70px #aba7f1;
 
 	transform-style: preserve-3d;
 	transition: transform .05s linear;
+
+	h1, span {
+		position: absolute;
+		@include adaptive-font(42, 32);
+		color: #fff;
+	}
+
+	h1 {
+		top: 2%;
+		left: -15%;
+		transform: translateZ(80px);
+	}
+
+	span {
+		display: inline-block;
+		right: -40%;
+		margin-left: 20%;
+		bottom: 2%;
+		@include adaptive-font(32, 22);
+		transform: translateZ(35px);
+	}
 }
 
 .card__img {
-	position: relative;
 	width: 100%;
 	height: 100%;
 	background-image: url("../img/vr.jpg");
@@ -48,4 +66,24 @@ html	{
 	background-repeat: no-repeat;
 	background-position: 38% 50%;
 	mix-blend-mode: multiply;
+	border-radius: 16px;
+
+	z-index: -1;
+}
+
+
+@media screen and (max-width: 768px) {
+	.card {
+		h1 {
+			left: -5%;
+		}
+	}
+}
+
+@media screen and (min-width: 1471px) {
+	.card {
+		h1, span {
+			font-size: 42px;
+		}
+	}
 }
